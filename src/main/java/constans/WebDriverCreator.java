@@ -12,6 +12,8 @@ public class WebDriverCreator {
     YANDEX_BROWSER_PATH - путь к исполняемому файлу Яндекс браузера в системе
      */
 
+    public static final long WAIT_SEC_TIMEOUT = 10;
+
     public static WebDriver createWebDriver() {
         String browser = System.getProperty("browser");
         if (browser == null) {
@@ -40,4 +42,4 @@ public class WebDriverCreator {
         return new ChromeDriver(options);
     }
 }
-}
+
