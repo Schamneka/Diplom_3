@@ -1,6 +1,5 @@
 
-import constants.Variables;
-import constants.WebDriverCreator;
+import constants.*;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
@@ -9,15 +8,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import pom.*;
-import user.User;
-import user.UserOperations;
+import user.*;
 import utils.Generator;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class RegisterTest {
+public class RegisterTests {
 
     private WebDriver driver;
     User user;
@@ -46,6 +44,7 @@ public class RegisterTest {
         MatcherAssert.assertThat(loginPage.getLoginTextFromHeader(), equalTo("Вход"));
         loginPage.loginUser(user);
         Assert.assertTrue(profilePage.btnProfileTabIsEnabled());
+        UserOperations.deleteUser(UserOperations.getAccessToken(user));
 
     }
 
