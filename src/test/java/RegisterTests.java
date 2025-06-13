@@ -63,7 +63,6 @@ public class RegisterTests {
 
     @After
     public void teardown() {
-        //UserOperations.deleteUser(UserOperations.getAccessToken(user));
         driver.quit();
     }
 }
