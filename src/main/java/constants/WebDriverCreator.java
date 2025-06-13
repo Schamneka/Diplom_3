@@ -1,4 +1,4 @@
-package constans;
+package constants;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,7 +36,7 @@ public class WebDriverCreator {
 
     private static WebDriver createYandexDriver() {
         System.setProperty("webdriver.chrome.driver",
-                String.format("%s/%s", System.getenv("YANDEX_BROWSER_DRIVER_FILENAME")));
+                System.getenv("YANDEX_BROWSER_DRIVER_FILENAME"));
         ChromeOptions options = new ChromeOptions();
         options.setBinary(System.getenv("YANDEX_BROWSER_PATH"));
         return new ChromeDriver(options);

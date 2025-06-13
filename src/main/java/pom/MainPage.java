@@ -1,6 +1,6 @@
 package pom;
 
-import constans.Variables;
+import constants.Variables;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

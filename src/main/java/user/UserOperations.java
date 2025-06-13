@@ -1,6 +1,6 @@
 package user;
 
-import constans.ApiEndpoint;
+import constants.ApiEndpoint;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
